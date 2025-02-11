@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brian Verdugo's Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="./images/BV-Logo.png">
+    <link rel="icon" type="image/x-icon" href="./assets/images/BV-Logo.png">
+    <!-- Links Tailwind CSS to the HTML -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 
@@ -18,11 +19,13 @@
 -->
 
 <body class="bg-[#404080] m-0">
-    <header class="bg-[#ffb200] rounded-r-full flex justify-between items-center max-sm:w-85/100 max-sm:mt-4">
-        <h1 class="text-2xl font-bold">My Portfolio</h1>
-        <img class="rounded-full max-sm:w-16" src="./images/BV-Logo.png" alt="Logo">
+    <!-- Header -->
+    <header class="bg-[#ffb200] w-9/10 rounded-r-full mt-8 flex justify-between items-center max-sm:w-85/100 max-sm:mt-4">
+        <h1 class="text-3xl font-bold sm:ml-8">My Portfolio</h1>
+        <img class="w-24 rounded-full max-sm:w-16" src="./assets/images/BV-Logo.png" alt="Logo">
     </header>
-    <nav class="bg-[#fff000] text-sm rounded-l-full flex justify-between items-center relative max-sm:w-85/100 max-sm:left-15/100 max-sm:mb-8">
+    <!-- Nav -->
+    <nav class="bg-[#fff000] w-9/10 left-1/10 text-2xl rounded-l-full flex justify-around items-center relative mb-8 sm:p-2 max-sm:w-85/100 max-sm:left-15/100 max-sm:text-sm max-sm:mb-4">
         <a href="#">[Nav Link]</a>
         <a href="#">[Nav Link]</a>
         <a href="#">[Nav Link]</a>
@@ -30,52 +33,61 @@
         <a href="#">[Nav Link]</a>
     </nav>
 
+    <!-- Main content (split into sections) -->
     <main>
+        <!-- Profile section -->
         <section class="text-white p-4">
-            <img class="rounded-full max-sm:w-1/2 max-sm:inline" src="./images/Happy-Face.png" alt="Profile Picture">
-            <h1 class="text-2xl font-bold max-sm:inline">Brian Verdugo</h1>
-            <p class="max-sm:text-center">
+            <img class="w-1/4 border-2 rounded-full inline-block max-sm:w-4/10" src="./assets/images/Profile-Picture.jpeg" alt="Profile Picture">
+            <h1 class="text-2xl font-bold inline ml-2">Brian Verdugo</h1>
+            <p class=" sm:m-4 max-sm:text-center">
                 Hello there! I am currently 17 years old and a student at West-MEC taking coding classes. I've always been interested in coding since I've played a lot of video games growing up and wanted to one day make my own. There's a couple of projects I've already worked on for the class. Check them out if you'd like!
             </p>
         </section>
-        <section class="flex max-sm:justify-center">
-            <div class="" id="photoGallery">
-                <img src="#" alt="Gallery Image">
+        <!-- Gallery and Contacts section -->
+        <section class="flex items-center sm:w-3/4 sm:justify-self-center sm:mb-8 max-sm:flex-col max-sm:justify-center">
+            <div class="flex max-sm:justify-center" id="photoGallery">
+                <img id="galleryImg" class="w-2/3 max-sm:w-8/10" src="./assets/images/SS-color-theory.png" alt="Gallery Image">
             </div>
-            <div class="">
-                <h1>Contacts</h1>
-                <p>West-MEC Email:</p>
-                <a href="#">bverdu247@west-mec.org</a>
-                <p>Personal Email:</p>
-                <a href="#">bverdu247@west-mec.org</a>
-                <p>GitHub Profile:</p>
-                <a href="#">bverdu247@west-mec.org</a>
+            <div class="sm:w-4/3 text-white text-center max-sm:m-4">
+                <h1 class="text-2xl">Contacts</h1>
+                <p class="sm:inline">West-MEC Email:</p>
+                <a href="mailto:bverdu247@west-mec.org">bverdu247@west-mec.org</a>
+                <br>
+                <p class="sm:inline">Personal Email:</p>
+                <a href="mailto:bcarver157@gmail.com">bcarver157@gmail.com</a>
+                <br>
+                <p class="sm:inline">GitHub Profile:</p>
+                <a href="https://github.com/Brian-09">Brian-09</a>
             </div>
         </section>
     </main>
 
-    
-
-    <footer>
-        <img src="./images/BV-Logo.png" alt="Logo">
-        <div class="footer-links">
-            <a href="#">[Nav Link]</a>
-            <a href="#">[Nav Link]</a>
-            <a href="#">[Nav Link]</a>
-            <a href="#">[Nav Link]</a>
-            <a href="#">[Nav Link]</a>
-        </div>
-        <div class="footer-socials">
-            <a href="#">
-                <img src="#" alt="West-MEC Email Link">
-            </a>
-            <a href="#">
-                <img src="#" alt="Personal Email Link">
-            </a>
-            <a href="#">
-                <img src="#" alt="GitHub Link">
-            </a>
+    <!-- Footer -->
+    <footer class="bg-[#807c40] h-32 flex flex-row items-center sm:w-full max-sm:justify-around">
+        <img class="w-24 rounded-full sm:m-4 max-sm:w-16 max-sm:h-16" src="./assets/images/BV-Logo.png" alt="Logo">
+        <div class="flex max-sm:w-3/4 max-sm:flex-col">
+            <div class="text-center sm:w-2/3 content-center">
+                <a class="inline-block" href="#">[Nav Link]</a>
+                <a class="inline-block" href="#">[Nav Link]</a>
+                <a class="inline-block" href="#">[Nav Link]</a>
+                <a class="inline-block" href="#">[Nav Link]</a>
+                <a class="inline-block" href="#">[Nav Link]</a>
+            </div>
+            <div class="flex flex-row justify-evenly items-center">
+                <a href="mailto:bverdu247@west-mec.org">
+                    <img class="w-16 sm:m-4 max-sm:w-8" src="./assets/images/west-mec.jpg" alt="West-MEC Email Link">
+                </a>
+                <a href="mailto:bcarver157@gmail.com">
+                    <img class="w-20 sm:m-4 max-sm:w-10" src="./assets/images/gmail.webp" alt="Personal Email Link">
+                </a>
+                <a href="https://github.com/Brian-09">
+                    <img class="w-16 sm:m-4 max-sm:w-8" src="./assets/images/github.png" alt="GitHub Link">
+                </a>
+            </div>
         </div>
     </footer>
+
+    <!-- Links the gallery slideshow script to the HTML -->
+    <script src="./assets/gallery.js"></script>
 </body>
 </html>
